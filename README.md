@@ -6,7 +6,7 @@ Coming SOon
 
 ## License
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
 ## Download and Installation
