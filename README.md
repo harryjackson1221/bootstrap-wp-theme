@@ -29,6 +29,6 @@ Have a bug or an issue with this template? [Open a new issue](https://github.com
 
 bootstrap-wp-theme is made with Bootstrap
 
-* https://twitter.com/SBootstrap
+* https://getbootstrap.com/
 
 

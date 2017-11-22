@@ -1,7 +1,7 @@
 <?php
 /* enqueue styles and scripts */
   
-function boldgrid_bootstrap_enqueue_assets() {
+function wp_bootstrap_enqueue_assets() {
 	//wp_deregister_script ('jquery');
 
 	//Bootstrap core CSS
@@ -30,13 +30,33 @@ function boldgrid_bootstrap_enqueue_assets() {
 
 }
 
-add_action( 'wp_enqueue_scripts' , 'boldgrid_bootstrap_enqueue_assets' );
+add_action( 'wp_enqueue_scripts' , 'wp_bootstrap_enqueue_assets' );
 
+// Add the Bootstrap Nav Walker
+require_once get_template_directory() . '/wp-bootstrap-navwalker.php';
 
-function register_bootstrap_menu() {
-	register_nav_menu('primary-menu',__( 'Primary Menu' ));
+// Make sure that the primary-menu and footer-menu have the correct classes in them
+function primary_add_menu_atts( $atts, $item, $args ) {
+	if( $args->theme_location == 'primary-menu' ) {
+	$atts['class="nav-link js-scroll-trigger"'] = 'return true';
 }
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'primary_add_menu_atts', 10, 3 );
 
-add_action( 'init', 'register_bootstrap_menu' );
+function footer_menu_classes( $classes, $item, $args ) {
+    if ( $args->theme_location == 'footer-menu' ) {
+        // Make these items 3-columns wide in Bootstrap
+        $classes[] = 'list-inline-item';
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'footer_menu_classes', 10, 3 ); 
+
+// Register the menu
+register_nav_menus( array(
+    'primary-menu' => __( 'Primary Menu', 'boldgrid-bootstrap' ),
+    'footer-menu' => __( 'Footer Menu', 'boldgrid-bootstrap' ),
+) );
 
 ?>

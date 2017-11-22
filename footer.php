@@ -3,17 +3,19 @@
     <footer>
       <div class="container">
         <p>&copy; 2017 <?php bloginfo( 'name' ); ?>. All Rights Reserved.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">Privacy</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Terms</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">FAQ</a>
-          </li>
-        </ul>
+        <?php wp_nav_menu( 
+          array(
+            'theme_location'    => 'footer-menu',
+            'depth'             => 1,
+            'container'         => 'div',
+            'container_class'   => 'container',
+            'container_id'      => '',
+            'menu_class'        => 'list-inline',
+            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'            => new WP_Bootstrap_Navwalker()
+          ) ); 
+        ?>
+        
       </div>
     </footer>
 
