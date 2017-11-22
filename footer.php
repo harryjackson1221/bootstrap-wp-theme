@@ -2,7 +2,7 @@
 <!-- Begin Footer -->
     <footer>
       <div class="container">
-        <p>&copy; 2017 Start Bootstrap. All Rights Reserved.</p>
+        <p>&copy; 2017 <?php bloginfo( 'name' ); ?>. All Rights Reserved.</p>
         <ul class="list-inline">
           <li class="list-inline-item">
             <a href="#">Privacy</a>
