@@ -1,10 +1,4 @@
-<?php
-
-// Enqueue Theme styles and scripts
-require_once get_template_directory() . '/inc/enqueue-styles-scripts.php';
-
-// Add the Bootstrap Nav Walker
-require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
+<?php 
 
 // Make sure that the primary-menu and footer-menu have the correct classes in them
 function primary_add_menu_atts( $atts, $item, $args ) {
@@ -29,5 +23,6 @@ register_nav_menus( array(
     'primary-menu' => __( 'Primary Menu', 'boldgrid-bootstrap' ),
     'footer-menu' => __( 'Footer Menu', 'boldgrid-bootstrap' ),
 ) );
+
 
 ?>
