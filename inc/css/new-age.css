@@ -173,6 +173,9 @@ div.download {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
+.footer-widgets .row div .widget {
+  margin: -60px 0;
+} 
 
 footer {
   padding: 25px 0;
