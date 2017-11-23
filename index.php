@@ -1,7 +1,9 @@
 <!-- INDEX TEMPLATE -->
 
 <?php get_header(); ?>
-
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
 <!-- Begin Loop -->    
 
 <?php if ( have_posts() ) : ?>
@@ -29,5 +31,8 @@
     </div><!--end navigation-->
 <?php else : ?>
 <?php endif; ?>
-
+      </div>
+    </div>
+  </div>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
