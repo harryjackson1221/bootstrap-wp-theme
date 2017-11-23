@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-lg-12">
 <!-- Begin Loop -->    
 
 <?php if ( have_posts() ) : ?>
@@ -34,5 +34,19 @@
       </div>
     </div>
   </div>
-<?php get_sidebar(); ?>
+<div class="section">
+<div class="container-fluid footer-widgets">
+  <div class="row">
+    <div class="col-md-4">
+<?php dynamic_sidebar('footer-1'); ?>
+    </div>
+    <div class="col-md-4">
+<?php dynamic_sidebar('footer-2'); ?>
+    </div>
+    <div class="col-md-4">
+<?php dynamic_sidebar('footer-3'); ?>
+    </div>
+  </div>
+</div>
+</div>
 <?php get_footer(); ?>
