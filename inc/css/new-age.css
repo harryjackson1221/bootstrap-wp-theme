@@ -43,7 +43,7 @@ p {
   line-height: 1.5;
   margin-bottom: 20px; }
 
-section {
+section.container-fluid {
   padding: 100px 0; }
   section h2 {
     font-size: 50px; }
@@ -135,26 +135,13 @@ section.bg-overlay {
 
 
 
-div.download {
+div#download {
   position: relative;
   padding: 150px 0; }
-  div.download h2 {
+  div#download h2 {
     font-size: 50px;
     margin-top: 0; }
-  div.download .badges .badge-link {
-    display: block;
-    margin-bottom: 25px; }
-    div.download .badges .badge-link:last-child {
-      margin-bottom: 0; }
-    div.download .badges .badge-link img {
-      height: 60px; }
-    @media (min-width: 768px) {
-      div.download .badges .badge-link {
-        display: inline-block;
-        margin-bottom: 0; } }
-  @media (min-width: 768px) {
-    div.download h2 {
-      font-size: 70px; } }
+
 
 .feature-item {
   max-width: 325px;
@@ -173,9 +160,37 @@ div.download {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
-.footer-widgets .row div .widget {
-  margin: -60px 0;
-} 
+section.widget {
+  height:100%;
+  border:20px solid #222222; }
+
+
+div#footer-widgets {
+  padding: 40px 0 5px;
+  background-color: #222222;
+  font-size:20px; }
+  div.footer-widgets h3 {
+    font-size: 15px;
+    text-transform:uppercase;
+    color:#fff;
+    padding: 10px 10px 0 10px; }
+  div.footer-widgets ul li {
+    list-style: none; 
+    text-align: left;
+    padding-bottom:3px;
+    margin-right:10px;
+    margin-left: -30px;
+    border-bottom: 1px solid #999;}
+    div.footer-widgets ul li a {
+    color:#999;
+    }
+    
+    div.footer-widgets ul li a:hover {
+    color:#898888;
+    text-decoration: none;
+    }
+  
+
 
 footer {
   padding: 25px 0;
