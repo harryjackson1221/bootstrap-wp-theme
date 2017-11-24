@@ -1,7 +1,7 @@
 <!-- INDEX TEMPLATE -->
 
 <?php get_header(); ?>
-<div class="container-fluid">
+<div class="container-fluid content-area">
   <div class="row">
     <div class="col-lg-12">
 <!-- Begin Loop -->    

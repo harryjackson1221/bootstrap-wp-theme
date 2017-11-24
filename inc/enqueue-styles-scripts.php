@@ -15,8 +15,11 @@ function wp_bootstrap_enqueue_assets() {
 
     //Google Fonts 
     wp_enqueue_style( 'lato', '//fonts.googleapis.com/css?family=Lato' );
-    wp_enqueue_style( 'lato', '//fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900' );
-    wp_enqueue_style( 'lato', '//fonts.googleapis.com/css?family=Muli' );
+    wp_enqueue_style( 'satisfy', '//fonts.googleapis.com/css?family=Satisfy' );
+    wp_enqueue_style( 'catamaran', '//fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900' );
+    wp_enqueue_style( 'muli', '//fonts.googleapis.com/css?family=Muli' );
+
+    
     
 
     //Custom styles for this template
